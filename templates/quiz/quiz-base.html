@@ -1,0 +1,29 @@
+{% extends "head.html" %}
+{% block content %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename = 'js/quiz.js') }}"></script>
+    <script>
+        const data = {{ data | tojson }};
+        const seq = {{ seq }};
+        const total = {{ max }};
+        let response = {{ response | tojson }};
+        let format = {{ format | int }};
+    </script>
+    <div class="screen">
+        <div class="half-width">
+            <div class="progress-pad">
+                <div class="progress" id="progress_">
+                    <div class="progress-bar" id='progress-group' role="progressbar"></div>
+                </div>
+                <div id="progress-count"></div>
+            </div>
+        </div>
+        {% if format == 1 %}
+            {% include 'quiz/quiz-format-1.html' %}
+        {% elif format == 2 %}
+            {% include 'quiz/quiz-format-2.html' %}
+        {% elif format == 0 %}
+            {% include 'quiz/quiz-format-3.html' %}
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,76 @@
+.button-container {
+    width: 100%;
+    padding: 5px 0;
+    /* float:right; */
+}
+
+#next {
+    float: right;
+}
+
+.learn-container {
+    padding: 10px 0;
+}
+
+.overview-text {
+    padding: 2.5vh 16vw 0 16vw;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.carousel-holder {
+    display: flex;
+    padding: 0 33vw;
+}
+
+.modal-dialog {
+    max-width: 70vw;
+    margin: 30px auto;
+}
+
+.modal-body {
+    position: relative;
+    padding: 0;
+}
+
+.close {
+    position: absolute;
+    right: -30px;
+    top: 0;
+    z-index: 999;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #fff;
+    opacity: 1;
+}
+
+.learn-content {
+    padding: 0 15vw;
+}
+
+.chord-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+}
+
+.chord-grow {
+    font-size: 20px;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    color: grey;
+}
+
+.chord-shrink {
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 auto;
+}
+
+.video-margin {
+    padding-top: 15px;
+}

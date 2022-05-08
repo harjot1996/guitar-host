@@ -1,0 +1,45 @@
+{% extends "head.html" %}
+{% block content %}
+
+    <script type="text/javascript" src="{{ url_for('static', filename = 'js/home.js') }}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}">
+
+    <div class="screen">
+        <div class="top">
+
+            <div class = "home-header">
+                Let's learn some guitar chords!
+            </div>
+            <div class = "home-img">
+                <img class="fit-image" src="/static/img/home.jpg" alt="alt">
+            </div>
+
+
+
+            <div class = "home-text">
+            
+                <span class = "grey">
+                    Want to learn the most prevalent chord progressions in guitar? <br><br>
+                    With the four chords
+                </span>
+
+                <span class = "grey"></span>
+                C, G, Am <span class = "grey"> and </span> F, <span class = "grey">
+                you can play songs like </span>With Or Without You <span class = "grey">
+                by U2</span>, I'm Yours <span class = "grey">by Jason Mraz</span>, Zombie
+                <span class = "grey">by the Cranberries</span>, She Will Be Loved
+                <span class = "grey">by Maroon 5 and many more!</span>
+            </div>
+        </div>
+
+
+
+        <div class="bottom">
+            <div class="home-button">
+                <div class="green-button" id="begin-learn">OVERVIEW</div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "head.html" %}
+{% block content %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz.css') }}">
+    <script>
+        $( document ).ready(function() {
+            $('#start').click(function() {
+                window.location.href = "/quiz/1";
+            });
+        });
+    </script>
+    <div class="screen">
+        <div class="top">
+            <div class="half-width">
+                <div class = "quiz-start-placeholder grey">
+                    Ready to start quiz?
+                </div>
+                <div class="full-width">
+                    <div class="green-button" id="start">START</div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

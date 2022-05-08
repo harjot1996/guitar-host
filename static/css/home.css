@@ -1,0 +1,24 @@
+.home-header {
+    font-weight: bold;
+    font-size: 29px;
+    text-align: center;
+    padding-bottom: 1.875vh;
+}
+
+.home-img {
+    padding: 1.875vh 30vw;
+    align-items: center;
+}
+
+.home-text {
+    padding: 1.875vh 15vw;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.home-button {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 auto;
+    justify-content: center;
+}

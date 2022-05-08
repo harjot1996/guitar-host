@@ -1,0 +1,55 @@
+<audio id="audio" src="{{data.tone_url}}"></audio>
+<div class="full-flex">
+    <div class='half-width'>
+        <div class='row'>
+            <div class='col-2'></div>
+            <div class='col-10'>
+                <span class='quiz-text'>Select the correct chord based on the sound you hear.</span>
+            </div>
+        </div>
+    </div>
+    <div class="three-quarters-width">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <div class="pad-play-within">
+                    <img id="play-button" class="fit-image play-button-enclosed" src="/static/img/play.png" alt="Play button">
+                </div>
+            </div>
+            <div class="col-4"></div>
+        </div>
+        <div class="pad-top-25"></div>
+        <div class="row">
+            <div class="col-12">
+                <div id="incorrect" hidden>Incorrect!</div>
+            </div>
+        </div>
+    </div>
+    <div class="half-width">
+        <div class="row">
+            <div class="col-3"><button class="btn btn-secondary full-width opt-height" id="option-0">C</button></div>
+            <div class="col-3"><button class="btn btn-secondary full-width opt-height" id="option-1">G</button></div>
+            <div class="col-3"><button class="btn btn-secondary full-width opt-height" id="option-2">Am</button></div>
+            <div class="col-3"><button class="btn btn-secondary full-width opt-height" id="option-3">F</button></div>
+        </div>
+    </div>
+</div>
+
+<div class="bottom-quiz">
+    <div class="bottom-left">
+        <div class="overview-button">
+            <div id="result-placeholder"></div>
+        </div>
+    </div>
+    <div class="bottom-right">
+        <div class="quiz-bottom-button">
+            <div class="green-button button-override-red pad-right-25" id="review" hidden>Review</div>
+        </div>
+        <div class="quiz-bottom-button">
+            <div class="green-button disabled-button" id="check">Check</div>
+
+            <div class="green-button" id="next" hidden>Next</div>
+            <div class="green-button" id="finish" hidden>Finish</div>
+        </div>
+    </div>
+</div>

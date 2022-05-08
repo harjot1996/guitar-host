@@ -1,0 +1,38 @@
+{% include 'learn/learn-modal.html' %}
+<audio id="audio" src="{{data.audio_url}}"></audio>
+<div class="screen">
+    <div class="top">
+        <div class="learn-content">
+            <div class = "row">
+                <div class = "col-8">
+                    <div class="chord-column">
+                        <div class="chord-grow">
+                            <img class="fit-image" src="{{data.fret_img_url}}" alt="{{data.fret_img_alt}}">
+                        </div>
+                        <div class="chord-shrink video-margin">
+                            <div class="green-button button-override-accent full-width" id="video-btn" data-toggle="modal" data-src="{{data.video_url}}" data-alt="{{data.video_alt}}" data-target="#myModal">Watch Tutorial</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "col-4">
+                    <div class="chord-column">
+                        <div class="chord-grow video-margin">
+                            {{data.description|safe}}
+                        </div>
+                        <div class="chord-shrink">
+                            <div class="green-button button-override-accent full-width" id="play-audio">Play Chord</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="overview-button">
+            <div class="green-button" id="next">Next</div>
+            <div class="green-button" id="back-to-quiz" hidden>Back to Quiz</div>
+            <div class="green-button" id="start-quiz" hidden>Start Quiz</div>
+        </div>
+    </div>
+</div>

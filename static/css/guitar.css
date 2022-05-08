@@ -1,0 +1,171 @@
+:root {
+
+    --fretboard-height: calc(100vh / 2);
+    --fretboard-width: calc(var(--fretboard-height) * 0.8);
+    --fretboard-width-half: calc(var(--fretboard-height) * 0.4);
+    --fretboard-width-buffered: calc(var(--fretboard-width) + 100px);
+
+    --number-of-strings: 6;
+    --string-width: calc(var(--fretboard-width) / var(--number-of-strings));
+    --string-thickness: calc(var(--fretboard-width) / 60);
+
+    --string-padding: calc((var(--string-width) - var(--string-thickness)) / 2);
+    --fret-border: calc(var(--string-thickness) + var(--string-width));
+    
+    --string-color: #45454f;
+    --string-highlight-color: rgb(103, 125, 134);
+}
+
+.fretboard {
+    display: flex;
+    flex-direction: row;
+    height: var(--fretboard-height);
+    width: var(--fretboard-width-buffered);
+    padding: 0 50px;
+}
+
+.string {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    width: var(--string-thickness);
+    padding: 0 var(--string-padding);
+    background-color: var(--string-color);
+    background-clip: content-box;
+    z-index: 40;
+    position: relative;
+}
+
+.note-fret, .note-fret-right {
+    display: flex;
+    flex: 1;
+}
+
+.note-fret-bottom, .note-fret-last {
+    display: flex;
+    flex: 0;
+}
+
+.note-fret:before, .note-fret-bottom:before  {
+    z-index: -2;
+    background-color: var(--string-color);
+    content: '';
+    width: var(--fret-border);
+    height: var(--string-thickness);
+    position: absolute;
+}
+
+.dark.darker {
+    background-color: var(--string-highlight-color);
+}
+
+.dark {
+}
+
+.guitar-full {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.guitar-text {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    color: grey;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.guitar-top {
+    display: flex;
+    flex-direction: row;
+    flex: 8;
+    width: 100%;
+    height: 100%;
+}
+
+.guitar-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    align-items: flex-end;
+}
+
+.chord-pane {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 32px;
+    color: grey;
+    margin-right: var(--fretboard-width-half);
+}
+
+.finger-pane {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 32px;
+    color: grey;
+    margin-right: var(--fretboard-width-half);
+}
+
+.guitar-right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+}
+
+.center-fret {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+}
+
+.finger-pane:hover {
+    cursor: pointer;
+}
+
+.finger-holder {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
+}
+
+.draggable-finger {
+    color: white;
+    display: flex;
+    flex: 0;
+    min-width: var(--string-width);
+    height: var(--string-width);
+    background-color: RGB(60,141,225);
+    border: var(--string-thickness) solid RGB(50, 108, 171);
+    border-radius: 500%;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(var(--string-width)/1.8);
+    font-weight: 600;
+    z-index: 50;
+}
+
+.pane-reset {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    margin-right: var(--fretboard-width-half);
+    justify-content: center;
+}

@@ -1,0 +1,38 @@
+{
+  "c" : {
+    "audio_url": "/static/tones/c.mp3",
+    "audio_alt": "Audio of C Chord",
+    "video_url": "https://www.youtube.com/embed/vIzf2YryqKc",
+    "video_alt": "Instruction video of C Chord",
+    "fret_img_url": "/static/train/c.png",
+    "fret_img_alt": "Image of C chord finger placement",
+    "description": "First, position your third finger (ring finger) on the 3rd fret of the fifth string. This is a C note, and it will be the bass note of your chord. <br><br>Next, position your second (middle) finger at the second fret of the 4th string. <br><br>Finally, position your first (index) finger at the 1st fret of the second string."
+  },
+  "g" : {
+    "audio_url": "/static/tones/g.mp3",
+    "audio_alt": "Audio of G Chord",
+    "video_url": "https://www.youtube.com/embed/x8UFt4uFV-E",
+    "video_alt": "Instruction video of G Chord",
+    "fret_img_url": "/static/train/g.png",
+    "fret_img_alt": "Image of G chord finger placement",
+    "description": "First, take your first finger on the second fret of the fifth string. Put your second finger on the third fret of the sixth string. <br><br>Next, put your third finger on the third fret of the first string. <br><br>Strum all six strings. "
+  },
+  "am" : {
+    "audio_url": "/static/tones/am.mp3",
+    "audio_alt": "Audio of A Minor Chord",
+    "video_url": "https://www.youtube.com/embed/M9DIDxzO-gs",
+    "video_alt": "Instruction video of A Minor Chord",
+    "fret_img_url": "/static/train/am.png",
+    "fret_img_alt": "Image of A Minor chord finger placement",
+    "description": "Begin by placing your first (index) finger on the first fret of your second string.  <br><br>From there, place your second (middle) finger on the second fret of your 4th string.  <br><br>Finally, stretch your third (ring) finger over to the third string on the second fret. "
+  },
+  "f" : {
+    "audio_url": "/static/tones/f.mp3",
+    "audio_alt": "Audio of F Chord",
+    "video_url": "https://www.youtube.com/embed/qY9_N9q0WQc",
+    "video_alt": "Instruction video of F Chord",
+    "fret_img_url": "/static/train/f.png",
+    "fret_img_alt": "Image of F chord finger placement",
+    "description": "There are two ways of pressing the F major chord. For the first version, your first finger hold down all strings in the first fret (as shown the picture). For the second version, your first finger lay across the 1st and 2nd on the first fret (as shown in the diagram and video). <br><br> Take your second finger, and place it on the second fret of the third string. <br><br> Place your third and forth finger on the third fret of the forth and fifth string."
+  }
+}

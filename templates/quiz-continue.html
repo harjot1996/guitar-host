@@ -1,0 +1,34 @@
+{% extends "head.html" %}
+{% block content %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz.css') }}">
+    <script>
+        const next = {{next}};
+    </script>
+    <script>
+        $( document ).ready(function() {
+            $('#yes').click(function() {
+                window.location.href = "/quiz/" + next.toString();
+            });
+            $('#no').click(function() {
+                ajax_('/flush-progress', {}, function callbackFunction() {
+                    window.location.href = "/quiz/1";
+                } )
+            });
+        });
+    </script>
+
+    <div class="screen">
+        <div class="top">
+            <div class="half-width">
+                <div class = "quiz-start-placeholder grey">
+                    Continue Quiz?
+                </div>
+                <div class="full-width">
+                    <div class="green-button" id="yes">YES</div>
+                    <div class="margin-20"></div>
+                    <div class="green-button" id="no">NO</div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

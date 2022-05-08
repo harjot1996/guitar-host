@@ -1,0 +1,26 @@
+{% extends "head.html" %}
+{% block content %}
+    <script type="text/javascript" src="{{ url_for('static', filename = 'js/learn.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/learn.css') }}">
+    
+    <script>
+        const data = {{ data | tojson }};
+        const review = {{ is_review }};
+    </script>
+
+
+        {% if chapter == 'overview' %}
+            {% include 'learn/learn-overview.html' %}
+        {% else %}
+            {% include 'learn/learn-chords.html' %}
+        {% endif %}
+
+    {#<div class="button-container container">
+        <button id="next">Next</button>
+        <button id='back-to-quiz' hidden>Back to quiz</button>
+        <button id="start-quiz" hidden>Start Quiz</button>
+    </div>#}
+
+
+
+{% endblock %}

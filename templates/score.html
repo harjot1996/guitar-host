@@ -1,0 +1,21 @@
+{% extends "head.html" %}
+{% block content %}
+    <script type="text/javascript" src="{{ url_for('static', filename = 'js/score.js') }}"></script>
+    <script>
+        const correct = {{ correct | tojson }};
+        const wrong = {{ wrong | tojson }};
+        const max = {{ max | tojson }};
+    </script>
+    <div class="full-screen">
+        <div class="score-holder">
+            <div class="score-text" id='score-value'></div>
+            <div class='score-info' id='score-info'></div>
+            <div class="score-return">
+                <div class="green-button" id="return">Start Over?</div>
+            </div>
+        </div>
+        {% include 'score-svg.html' %}
+
+    </div>
+
+{% endblock %}
